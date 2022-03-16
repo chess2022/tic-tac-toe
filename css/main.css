@@ -14,9 +14,17 @@ main {
     display: grid;
     grid-template-columns: 100px 100px 100px;
     gap: 10px;
+    margin-bottom: 30px;
 }
+
 .square {
     height: 100px;
     width: 100px;
     background-color: white;
+}
+
+button {
+    background-color: darkolivegreen;
+    font-size: 20px;
+    color: white;
 }
