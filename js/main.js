@@ -12,9 +12,17 @@ console.log("js is up and running!");
 // bonus - make a timer for each player's turn
 
 /*----- cached element references -----*/
+// message container - h1 and whose turn etc
 // the game squares
 // reset button
 
 /*----- event listeners -----*/
+// mouse click on 9 squares
+// mouse click on reset button
+// optional - user initiates game start
 
 /*----- functions -----*/
+// initialize (start) game
+// handle user interaction - when user clicks square update the state
+// check for 3 in a row (winner) <-- main game logic
+// render messages to the DOM
