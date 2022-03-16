@@ -53,7 +53,18 @@ resetButton.addEventListener("click", init);
 
 /*----- functions -----*/
 // initialize (start) game
+function init() {
+    console.log("init function called")
+}
 // handle user interaction - when user clicks square update the state // handleMove()
-
+function handleMove() {
+    console.log("handle move function called")
+}
 // check for 3 in a row (winner) <-- main game logic
+function checkForWinner() {
+    console.log("check for winner function called")
+}
 // render messages to the DOM
+function render() {
+    console.log("check for render function called")
+}
