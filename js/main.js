@@ -52,14 +52,31 @@ resetButton.addEventListener("click", init);
 // optional - user initiates game start
 
 /*----- functions -----*/
-// initialize (start) game
+// initialize (start) game -> also to reset the game
 function init() {
     console.log("init function called")
+    // we need a dataset to keep track of player moves
+    board = new Array(9).fill(null) // [null, null, null, .....]x9 - tracks game play
+    turn = 1; // x goes first
+    winner = null; // set initial winner to no one
 }
+// start the game on page load
+init();
+
 // handle user interaction - when user clicks square update the state // handleMove()
-function handleMove() {
-    console.log("handle move function called")
+function handleMove(event) {
+    console.log(`${event.target.dataset.square} was clicked`);
+    const squareNumber = parseInt(event.target.dataset.square); // turns string into a number
+    // set the index in the board array so we know that spot has been claimed
+    board[squareNumber] = turn
+    // switch the turn
+    turn *= -1 
+    // check for winner
+    winner = checkForWinner()
+    // render message to user
+    render()
 }
+
 // check for 3 in a row (winner) <-- main game logic
 function checkForWinner() {
     console.log("check for winner function called")
